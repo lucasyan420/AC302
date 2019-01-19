@@ -1,0 +1,52 @@
+*{
+	display:flex;
+	flex-direction: column;
+	align-content:center;
+	text-align:center;
+}
+
+#heading{
+	font-size:100px;
+	font-weight:bold;
+	margin-bottom: 50px;
+	border:10px double;
+	font-family: 'Charm', cursive;
+}
+
+#sport1{
+	width:100wh;
+	height:500px;
+	font-weight:bold;
+	font-size:50px;
+	border:10px double;
+	flex-direction:row;
+}
+#sport2{
+	width:100wh;
+	height:500px;
+	font-weight:bold;
+	font-size:50px;
+	border:10px double;
+}
+#sport3{
+	width:100wh;
+	height:500px;
+	font-weight:bold;
+	font-size:50px;
+	border:10px double;
+}
+
+.pictures{
+	width:400px;
+	height:450px;
+	float:left;
+}
+
+#football{
+	font-size:30px;
+	float:right;
+}
+#headingfootball{
+	font-weight:bold;
+	font-size:50px;
+}
