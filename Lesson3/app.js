@@ -105,6 +105,3 @@ c5tx.closePath();
 c5tx.stroke();
 c5tx.fillStyle = "cyan";
 c5tx.fill();
-
-
-
