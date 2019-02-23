@@ -33,9 +33,10 @@ function create(){
 	platform1.body.immovable = true;
 
 	var platform2 = platform.create(400, 250, 'platform');
+	platform2.scale.setTo(1/2,1);
 	platform2.body.immovable = true;
 
-	var platform3 = platform.create(-225,380, 'platform');
+	var platform3 = platform.create(-225,350, 'platform');
 	platform3.body.immovable = true;
 
 	var style = {font: "bold 32px Arial", fill:"#fff"};
