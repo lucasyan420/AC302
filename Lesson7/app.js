@@ -35,13 +35,21 @@ function create(){
 	var platform2 = platform.create(400, 400, 'platform');
 	platform2.body.immovable = true;
 
+	var platform3 = platform.create(-200,325, 'platform');
+	platform3.body.immovable = true;
+
 	var style = {font: "bold 32px Arial", fill:"#fff"};
+
 	scorelabel = game.add.text(300,560, "Score:", style);
 	scoretext = game.add.text(420,560, score, style);
+	scorelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+	scoretext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+
 
 	lifelabel = game.add.text(10,5, "Life:", style);
-	lifetext = game.add.text(80,5, life, style);
-
+	lifetext = game.add.text(80,5, life, style)
+	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 }
 
 function update(){
