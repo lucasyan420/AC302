@@ -39,7 +39,7 @@ function create(){
 	scoretext = game.add.text(420,560, score, style);
 
 	lifelabel = game.add.text(10,5, "Life:", style);
-	lifetext = game.add.text(120,5, life, style);
+	lifetext = game.add.text(80,5, life, style);
 
 }
 
