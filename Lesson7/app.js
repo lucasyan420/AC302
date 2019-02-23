@@ -28,7 +28,8 @@ function create(){
 	//set ground to immovable
 	ground.body.immovable = true;
 
-	var platform1 = platform.create(-100,250, 'platform');
+	var platform1 = platform.create(100,250, 'platform');
+	platform1.scale.setTo(1/2,1);
 	platform1.body.immovable = true;
 
 	var platform2 = platform.create(400, 400, 'platform');
