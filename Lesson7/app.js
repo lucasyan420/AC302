@@ -12,7 +12,7 @@ function preload(){
 	game.load.image ("star", "assets/star.png")
 	game.load.spritesheet("baddie", "assets/baddie.png", 32, 32);
 
-};
+}
 
 function create(){
 	game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -41,8 +41,8 @@ function create(){
 	lifelabel = game.add.text(10,5, "Life:", style);
 	lifetext = game.add.text(120,5, life, style);
 
-};
+}
 
 function update(){
 
-};
+}
