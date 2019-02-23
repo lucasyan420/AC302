@@ -39,6 +39,9 @@ function create(){
 	var platform3 = platform.create(-225,350, 'platform');
 	platform3.body.immovable = true;
 
+	var platform4 = platform.create(600, 450, 'platform');
+	platform4.body.immovable = true;
+
 	var style = {font: "bold 32px Arial", fill:"#fff"};
 
 	scorelabel = game.add.text(300,560, "Score:", style);
