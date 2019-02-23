@@ -1,0 +1,17 @@
+
+h1{
+	font-family: 'Lora', serif;
+	font-weight: bold;
+	color:white;
+}
+canvas{
+	background:blue;
+}
+div {
+	
+}
+
+#title{
+	text-align:center;
+	background-color: red;
+}
