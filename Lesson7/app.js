@@ -45,7 +45,7 @@ function create(){
 	var style = {font: "bold 32px Arial", fill:"#fff"};
 
 	scorelabel = game.add.text(300,560, "Score:", style);
-	scoretext = game.add.text(420,560, score, style);
+	scoretext = game.add.text(350,560, score, style);
 	scorelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	scoretext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
