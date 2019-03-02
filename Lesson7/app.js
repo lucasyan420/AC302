@@ -76,7 +76,7 @@ function create(){
 	stars = game.add.physicsGroup();
 	stars.enableBody = true;
 
-	var star1 = star1.create(0,0, 'stars');
+	var star1 = stars.create(0,0, 'star');
 	star1.body.gravity.y =200;
 	star1.body.bounce.y = 0.7 + Math.random() * 0.2;
 	// var star2 = star2.create(0,0, 'star');
