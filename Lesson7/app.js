@@ -118,7 +118,7 @@ function create(){
 
 function update(){
 	 game.physics.arcade.collide(player, platform);
-	 game.physics.arcade.collide(star, platform);
+	 game.physics.arcade.collide(stars, platform);
 	 game.physics.arcade.collide(enemy, platform);
 
 // 	 player.body.velocity.x = 0;
