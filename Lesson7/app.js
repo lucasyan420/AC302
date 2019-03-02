@@ -82,7 +82,7 @@ function create(){
 	var star2 = stars.create(80,0, 'star');
 	star2.body.gravity.y =200;
 	star2.body.bounce.y = 0.7 + Math.random() * 0.2;
-	var star4 = stars.create(160,0, 'star');
+	var star3 = stars.create(160,0, 'star');
 	star3.body.gravity.y =200;
 	star3.body.bounce.y = 0.7 + Math.random() * 0.2;
 	var star5 = stars.create(240,0, 'star');
