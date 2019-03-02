@@ -125,7 +125,7 @@ function update(){
  	 	player.animation.play('left');
  	} else if(cursors.right.isDown) {
  		player.body.velocity.x = 150;
- 		player.animation.play('left');
+ 		player.animation.play('right');
  	} else if(cursors.up.isDown) {
  		player.body.velocity.y = -150;
  		player.animation.play('up');
