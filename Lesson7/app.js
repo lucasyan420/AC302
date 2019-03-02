@@ -117,6 +117,32 @@ function create(){
 }
 
 function update(){
-	// game.physics.arcade.collide(player, platform);
-	// game.physics.arcade.collide(star, platform);
+	 game.physics.arcade.collide(player, platform);
+	 game.physics.arcade.collide(star, platform);
+	 game.physics.arcade.collide(enemy, platform);
+
+	 player.body.velocity.x = 0;
+
+	 if(cursors.left.isDown) {
+	 	player.body.velocity.x = -150;
+	 	player.animation.play('left');
+	} else if(cursors.right.isDown) {
+		player.body.velocity.x = 150;
+		player.animation.play('left');
+	} else if(cursors.up.isDown) {
+		player.body.velocity.y = -150;
+		player.animation.play('up');
+	} else if(cursors.down.isDown) {
+		player.body.velocity.y = 150;
+		player.animation.play('down');
+	} else {
+		player.animations.stop();
+		player.frame = 4;
+	}
+
+	if(cursors.up.isDown && player.body.touching.down) {
+		player.body.velocity.y = -300;
+	}
+
+
 }
