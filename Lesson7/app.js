@@ -57,8 +57,8 @@ function create(){
 
 	player = game.add.sprite(50, 450, 'dude');
 		
-		player.anmations.add('left',[0,1,2,3],10,true);
-		player.anmations.add('right',[5,6,7,8],10,true);
+		player.animations.add('left',[0,1,2,3],10,true);
+		player.animations.add('right',[5,6,7,8],10,true);
 		game.physics.arcade.enable(player);
 		player.body.bounce.y = 0.2;
 		player.body.gravity.y = 300;
@@ -66,8 +66,8 @@ function create(){
 
 	enemy = game.add.sprite(450, 300, 'baddie');
 		
-		enemy.anmations.add('left',[0,1],10,true);
-		enemy.anmations.add('right',[2,3],10,true);
+		enemy.animations.add('left',[0,1],10,true);
+		enemy.animations.add('right',[2,3],10,true);
 		game.physics.arcade.enable(enemy);
 		enemy.body.bounce.y = 0.2;
 		enemy.body.gravity.y = 300;
@@ -113,7 +113,7 @@ function create(){
 	// star12.body.gravity.y =200;
 	// star12.body.bounce.y = 0.7 + Math.random() * 0.2;
 
-	// cursors = game.input.keyboard.createCursorkeys();
+	// cursors = game.input.keyboard.createCursorKeys();
 }
 
 function update(){
