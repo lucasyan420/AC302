@@ -122,16 +122,16 @@ function update(){
 
  	 if(cursors.left.isDown) {
  	 	player.body.velocity.x = -150;
- 	 	player.animation.play('left');
+ 	 	player.animations.play('left');
  	} else if(cursors.right.isDown) {
  		player.body.velocity.x = 150;
- 		player.animation.play('right');
+ 		player.animations.play('right');
  	} else if(cursors.up.isDown) {
  		player.body.velocity.y = -150;
- 		player.animation.play('up');
+ 		player.animations.play('up');
  	} else if(cursors.down.isDown) {
  		player.body.velocity.y = 150;
- 		player.animation.play('down');
+ 		player.animations.play('down');
  	} else {
  		player.animations.stop();
 		player.frame = 4;
