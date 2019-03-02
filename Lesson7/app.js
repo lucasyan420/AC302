@@ -55,7 +55,7 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	player = game.add.sprite(50, 400, 'dude');
+	player = game.add.sprite(50, 400, 'player');
 		
 		player.animations.add('left',[0,1,2,3],10,true);
 		player.animations.add('right',[5,6,7,8],10,true);
