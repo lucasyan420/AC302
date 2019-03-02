@@ -116,7 +116,7 @@ function create(){
 	// cursors = game.input.keyboard.createCursorkeys();
 }
 
-// function update(){
+function update(){
 // 	 game.physics.arcade.collide(player, platform);
 // 	 game.physics.arcade.collide(star, platform);
 // 	 game.physics.arcade.collide(enemy, platform);
@@ -145,4 +145,4 @@ function create(){
 // 	}
 
 
-// }
+}
