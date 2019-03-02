@@ -54,8 +54,69 @@ function create(){
 	lifetext = game.add.text(80,5, life, style)
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+
+	player = game.add.sprite(50, 450, 'dude');
+		
+		player.anmations.add('left',[0,1,2,3],10,true);
+		player.anmations.add('right',[5,6,7,8],10,true);
+		game.physics.arcade.enable(player);
+		player.body.bounce.y = 0.2;
+		player.body.gravity.y = 300;
+		player.body.collideWorldBounds = true;
+
+	enemy = game.add.sprite(450, 300, 'baddie');
+		
+		player.anmations.add('left',[0,1],10,true);
+		player.anmations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy);
+		enemy.body.bounce.y = 0.2;
+		enemy.body.gravity.y = 300;
+		enemy.body.collideWorldBounds = true;
+
+	stars = game.add.physicsGroup();
+	stars.enableBody = true;
+
+	var star1 = star.create(0,0, 'star');
+	star1.body.gravity.y =200;
+	star1.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star2 = star.create(0,0, 'star');
+	star2.body.gravity.y =200;
+	star2.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star3 = star.create(80,0, 'star');
+	star3.body.gravity.y =200;
+	star3.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star4 = star.create(160,0, 'star');
+	star4.body.gravity.y =200;
+	star4.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star5 = star.create(240,0, 'star');
+	star5.body.gravity.y =200;
+	star5.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star6 = star.create(320,0, 'star');
+	star6.body.gravity.y =200;
+	star6.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star7 = star.create(400,0, 'star');
+	star7.body.gravity.y =200;
+	star7.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star8 = star.create(480,0, 'star');
+	star8.body.gravity.y =200;
+	star8.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star9 = star.create(560,0, 'star');
+	star9.body.gravity.y =200;
+	star9.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star10 = star.create(640,0, 'star');
+	star10.body.gravity.y =200;
+	star10.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star11 = star.create(720,0, 'star');
+	star11.body.gravity.y =200;
+	star11.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star12 = star.create(800,0, 'star');
+	star12.body.gravity.y =200;
+	star12.body.bounce.y = 0.7 + Math.random() * 0.2;
+
+	cursors = game.input.keyboard.createCursorkeys();
 }
 
 function update(){
-
+	game.physics.arcade.collide(player, platform);
+	game.physics.arcade.collide(star, platform);
 }
