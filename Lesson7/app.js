@@ -66,8 +66,8 @@ function create(){
 
 	enemy = game.add.sprite(450, 300, 'baddie');
 		
-		player.anmations.add('left',[0,1],10,true);
-		player.anmations.add('right',[2,3],10,true);
+		enemy.anmations.add('left',[0,1],10,true);
+		enemy.anmations.add('right',[2,3],10,true);
 		game.physics.arcade.enable(enemy);
 		enemy.body.bounce.y = 0.2;
 		enemy.body.gravity.y = 300;
