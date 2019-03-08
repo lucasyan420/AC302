@@ -8,7 +8,7 @@ function preload(){
 	// sprite sheet (animations or different image)
 	game.load.image('sky','sky.png');
 	game.load.spritesheet("player", "dude.png", 32, 48);
-	game.load.image('platform', 'platform.png');
+	game.load.image('platform', 'platform1.png');
 	game.load.image ("star", "star.png")
 	game.load.spritesheet("baddie", "baddie.png", 32, 32);
 
