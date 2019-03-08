@@ -141,7 +141,7 @@ function update(){
   	}
 
   	game.physics.arcade.overlap(player, stars, collectStar);
-  	game.physics.arcade.overlap(player, enemy1, loseLife);
+  	game.physics.arcade.overlap(player, enemy, loseLife);
   	moveEnemy();
 
   	if(life < 0 ){
@@ -159,7 +159,7 @@ function update(){
 
   	}
 
-  	function loseLife(player, enemy1){
+  	function loseLife(player, enemy){
   		//update score variable
   		score = score -1;
   		//reflect in text
@@ -171,12 +171,12 @@ function update(){
 
   	function moveEnemy(){
   		//Enemy AI
-  		if(enemy1.x > 759){
-  			enemy1.animations.play('left');
-  			enemy1.body.velocity.x = -120;
-  		} else if(enemy1.x < 405 ){
-  			enemy1.animations.play('right');
-  			enemy1.body.velocity.x = 120;
+  		if(enemy.x > 759){
+  			enemy.animations.play('left');
+  			enemy.body.velocity.x = -120;
+  		} else if(enemy.x < 405 ){
+  			enemy.animations.play('right');
+  			enemy.body.velocity.x = 120;
   		}
   	}
 
