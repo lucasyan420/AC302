@@ -189,9 +189,14 @@ function update(){
 
   	function endGame() {
   		player.kill();
-  		scorelabel.text = "GAME OVER! YOUR SCORE IS" + score;
-  		scoretext.visible = true;
-  		lifelabel.visible = true;
-  		lifetext.visible = true;
+  		enemy.kill();
+  		platform1.kill();
+  		platform2.kill();
+  		platform3.kill();
+  		platform4.kill();
+  		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
+  		scoretext.visible = false;
+  		lifelabel.visible = false;
+  		lifetext.visible = false;
   	}
 }
