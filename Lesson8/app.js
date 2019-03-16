@@ -154,6 +154,27 @@ function create(){
 	var star11 = stars.create(800,0, 'star');
 	star11.body.gravity.y =200;
 	star11.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star12 = stars.create(100,500, 'star');
+	star12.body.gravity.y =200;
+	star12.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star13 = stars.create(200,500, 'star');
+	star13.body.gravity.y =200;
+	star13.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star13 = stars.create(300,500, 'star');
+	star13.body.gravity.y =200;
+	star13.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star14 = stars.create(400,500, 'star');
+	star14.body.gravity.y =200;
+	star14.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star15 = stars.create(500,500, 'star');
+	star15.body.gravity.y =200;
+	star15.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star16 = stars.create(600,500, 'star');
+	star16.body.gravity.y =200;
+	star16.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star17 = stars.create(700,500, 'star');
+	star17.body.gravity.y =200;
+	star17.body.bounce.y = 0.7 + Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = +80;
@@ -224,7 +245,7 @@ function update(){
   		scoretext.setText(score);
   		//remove the star and reset the top
   		star.kill();
-  		star.reset(Math.floor(Math.random()*800),0);
+  		star.reset(Math.floor(Math.random()*800),(Math.floor(Math.random()*600)));
 
   	}
 
