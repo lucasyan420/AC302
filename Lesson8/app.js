@@ -343,7 +343,7 @@ function update(){
   		}
   	}
 
-  	function collectDiamond{
+  	function collectDiamond(){
   		score += 10;
   		score.setText(score);
   		diamond.kill();
