@@ -91,7 +91,7 @@ function create(){
 		enemy2.body.gravity.y = 300;
 		enemy2.body.collideWorldBounds = true;
 
-	enemy3 = game.add.sprite(400, 0, 'baddie');
+	enemy3 = game.add.sprite(390, 0, 'baddie');
 		
 		enemy3.animations.add('left',[0,1],10,true);
 		enemy3.animations.add('right',[2,3],10,true);
@@ -157,10 +157,6 @@ function create(){
 
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = -120;
-	enemy2.body.velocity.x = -120;
-	enemy3.body.velocity.x = -120;
-	enemy4.body.velocity.x = -120;
-	enemy5.body.velocity.x = -120;
 
 }
 
@@ -205,6 +201,10 @@ function update(){
   	game.physics.arcade.overlap(player, enemy4, loseLife);
   	game.physics.arcade.overlap(player, enemy5, loseLife);
   	moveEnemy();
+  	moveEnemy2();
+  	moveEnemy3();
+  	moveEnemy4();
+  	moveEnemy5();
 
   	if(life <= 0 ){
   		endGame();
@@ -247,6 +247,50 @@ function update(){
   		} else if(enemy.x < 0 ){
   			enemy.animations.play('right');
   			enemy.body.velocity.x = 120;
+  		}
+  	}
+
+  	function moveEnemy2(){
+  		//Enemy AI
+  		if(enemy2.x > 300){
+  			enemy2.animations.play('left');
+  			enemy2.body.velocity.x = -120;
+  		} else if(enemy2.x < 180 ){
+  			enemy2.animations.play('right');
+  			enemy2.body.velocity.x = 120;
+  		}
+  	}
+
+  	function moveEnemy3(){
+  		//Enemy AI
+  		if(enemy3.x > 790){
+  			enemy3.animations.play('left');
+  			enemy3.body.velocity.x = -120;
+  		} else if(enemy3.x < 0 ){
+  			enemy3.animations.play('right');
+  			enemy3.body.velocity.x = 120;
+  		}
+  	}
+
+  	function moveEnemy4(){
+  		//Enemy AI
+  		if(enemy4.x > 650){
+  			enemy4.animations.play('left');
+  			enemy4.body.velocity.x = -120;
+  		} else if(enemy4.x < 500 ){
+  			enemy4.animations.play('right');
+  			enemy4.body.velocity.x = 120;
+  		}
+  	}
+
+  	function moveEnemy5(){
+  		//Enemy AI
+  		if(enemy5.x > 790){
+  			enemy5.animations.play('left');
+  			enemy5.body.velocity.x = -120;
+  		} else if(enemy5.x < 650 ){
+  			enemy5.animations.play('right');
+  			enemy5.body.velocity.x = 120;
   		}
   	}
 
