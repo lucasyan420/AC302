@@ -109,7 +109,7 @@ function create(){
 		enemy4.body.gravity.y = 300;
 		enemy4.body.collideWorldBounds = true
 
-	enemy5 = game.add.sprite(790, 0, 'baddie');
+	enemy5 = game.add.sprite(700, 0, 'baddie');
 		
 		enemy5.animations.add('left',[0,1],10,true);
 		enemy5.animations.add('right',[2,3],10,true);
@@ -162,7 +162,7 @@ function create(){
 	enemy3.animations.play('right');
 	enemy4.body.velocity.x = +80;
 	enemy5.body.velocity.x = -20;
-	enemy5.animations.play('left');
+	enemy5.animations.play('left');g
 
 
 }
@@ -292,10 +292,10 @@ function update(){
 
   	function moveEnemy5(){
   		//Enemy AI
-  		if(enemy5.x > 790){
+  		if(enemy5.x > 720){
   			enemy5.animations.play('left');
   			enemy5.body.velocity.x = -120;
-  		} else if(enemy5.x < 650 ){
+  		} else if(enemy5.x < 670 ){
   			enemy5.animations.play('right');
   			enemy5.body.velocity.x = 120;
   		}
