@@ -82,7 +82,7 @@ function create(){
 		enemy.body.gravity.y = 300;
 		enemy.body.collideWorldBounds = true;
 
-	enemy2 = game.add.sprite(250, 0, 'baddie');
+	enemy2 = game.add.sprite(150, 0, 'baddie');
 		
 		enemy2.animations.add('left',[0,1],10,true);
 		enemy2.animations.add('right',[2,3],10,true);
@@ -91,7 +91,7 @@ function create(){
 		enemy2.body.gravity.y = 300;
 		enemy2.body.collideWorldBounds = true;
 
-	enemy3 = game.add.sprite(390, 0, 'baddie');
+	enemy3 = game.add.sprite(360, 0, 'baddie');
 		
 		enemy3.animations.add('left',[0,1],10,true);
 		enemy3.animations.add('right',[2,3],10,true);
@@ -109,7 +109,7 @@ function create(){
 		enemy4.body.gravity.y = 300;
 		enemy4.body.collideWorldBounds = true
 
-	enemy5 = game.add.sprite(700, 0, 'baddie');
+	enemy5 = game.add.sprite(790, 0, 'baddie');
 		
 		enemy5.animations.add('left',[0,1],10,true);
 		enemy5.animations.add('right',[2,3],10,true);
@@ -156,7 +156,12 @@ function create(){
 	star11.body.bounce.y = 0.7 + Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
-	enemy.body.velocity.x = -120;
+	enemy.body.velocity.x = -80;
+	enemy2.body.velocity.x = -80;
+	enemy3.body.velocity.x = -80;
+	enemy4.body.velocity.x = -80;
+	enemy5.body.velocity.x = -80;
+
 
 }
 
