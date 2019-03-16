@@ -175,6 +175,9 @@ function create(){
 	var star17 = stars.create(700,480, 'star');
 	star17.body.gravity.y =200;
 	star17.body.bounce.y = 0.7 + Math.random() * 0.2;
+	var star18 = stars.create(10,380, 'star');
+	star18.body.gravity.y =200;
+	star18.body.bounce.y = 0.7 + Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = +80;
