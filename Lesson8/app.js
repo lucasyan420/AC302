@@ -281,7 +281,7 @@ function update(){
   		if(enemy4.x > 600){
   			enemy4.animations.play('left');
   			enemy4.body.velocity.x = -120;
-  		} else if(enemy4.x < 420 ){
+  		} else if(enemy4.x < 42g0 ){
   			enemy4.animations.play('right');
   			enemy4.body.velocity.x = 120;
   		}
