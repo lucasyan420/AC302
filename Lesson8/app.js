@@ -278,10 +278,10 @@ function update(){
 
   	function moveEnemy4(){
   		//Enemy AI
-  		if(enemy4.x > 650){
+  		if(enemy4.x > 600){
   			enemy4.animations.play('left');
   			enemy4.body.velocity.x = -120;
-  		} else if(enemy4.x < 500 ){
+  		} else if(enemy4.x < 420 ){
   			enemy4.animations.play('right');
   			enemy4.body.velocity.x = 120;
   		}
