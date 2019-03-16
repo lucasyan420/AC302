@@ -320,7 +320,7 @@ function update(){
   		if(enemy5.x > 760){
   			enemy5.animations.play('left');
   			enemy5.body.velocity.x = -120;
-  		} else if(enemy5.x < 620 ){
+  		} else if(enemy5.x < 600 ){
   			enemy5.animations.play('right');
   			enemy5.body.velocity.x = 120;
   		}
