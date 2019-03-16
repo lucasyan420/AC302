@@ -59,7 +59,7 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	endlabel = game.add.text(300, 300, "Game Over! Your Score is ", style);
+	endlabel = game.add.text(0, 300, "Game Over! Your Score is ", style);
 	endlabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	endlabel.visible = false;
 
@@ -279,7 +279,7 @@ function update(){
   		if(enemy.x > 160){
   			enemy.animations.play('left');
   			enemy.body.velocity.x = -120;
-  		} else if(enemy.x < 20 ){
+  		} else if(enemy.x < 5 ){
   			enemy.animations.play('right');
   			enemy.body.velocity.x = 120;
   		}
@@ -312,7 +312,7 @@ function update(){
   		if(enemy4.x > 590){
   			enemy4.animations.play('left');
   			enemy4.body.velocity.x = -120;
-  		} else if(enemy4.x < 410 ){
+  		} else if(enemy4.x < 400 ){
   			enemy4.animations.play('right');
   			enemy4.body.velocity.x = 120;
   		}
