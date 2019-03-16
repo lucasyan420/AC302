@@ -59,6 +59,10 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
+	endlabel = game.add.text(300, 300, "Game Over! Your Score is ", style);
+	endlabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
+	endlabel.visible = false;
+
 
 	player = game.add.sprite(50, 400, 'dude');
 		
@@ -192,6 +196,9 @@ function update(){
   		enemy.kill();
   		platforms.kill();
   		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
+  		scorelabel.visible = false;
+  		endlabel.visible = true;
+  		endlabel.text = "Game Over! Your Score Is " + score;
   		scoretext.visible = false;
   		lifelabel.visible = false;
   		lifetext.visible = false;
