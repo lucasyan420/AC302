@@ -59,7 +59,7 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	endlabel = game.add.text(0, 300, "Game Over! Your Score is ", style);
+	endlabel = game.add.text(80, 300, "Game Over! Your Score is ", style);
 	endlabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	endlabel.visible = false;
 
