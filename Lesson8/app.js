@@ -9,7 +9,7 @@ function preload(){
 	game.load.image('sky','sky.png');
 	game.load.spritesheet('dude', 'dude.png', 32, 48);
 	game.load.image('ground', 'platform1.png');
-	game.load.image ('star', 'star.png')
+	game.load.image ('stars', 'star.png')
 	game.load.spritesheet('baddie', 'baddie.png', 32, 32);
 	game.load.image('diamond', 'diamond.png');
 	game.load.image('health', 'firstaid.png');
@@ -125,7 +125,7 @@ function create(){
 		enemy5.body.collideWorldBounds = true;
 
 	diamonds = game.add.physicsGroup();
-	diamods.enableBody = true;
+	diamonds.enableBody = true;
 	var diamond = diamonds.create(780, 100, 'diamond');
 	diamond.body.gravity.y = 200;
 	diamond.body.bounce.y = 0.7 + Math.random()* 0.2;
