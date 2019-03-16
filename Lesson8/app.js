@@ -317,10 +317,10 @@ function update(){
 
   	function moveEnemy5(){
   		//Enemy AI
-  		if(enemy5.x > 750){
+  		if(enemy5.x > 760){
   			enemy5.animations.play('left');
   			enemy5.body.velocity.x = -120;
-  		} else if(enemy5.x < 650 ){
+  		} else if(enemy5.x < 620 ){
   			enemy5.animations.play('right');
   			enemy5.body.velocity.x = 120;
   		}
