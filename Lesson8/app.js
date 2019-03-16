@@ -11,6 +11,8 @@ function preload(){
 	game.load.image('ground', 'platform1.png');
 	game.load.image ('star', 'star.png')
 	game.load.spritesheet('baddie', 'baddie.png', 32, 32);
+	game.load.image('diamond', 'diamond.png');
+	game.load.image('health', 'firstaid.png');
 
 }
 
@@ -43,6 +45,10 @@ function create(){
 	var platform4 = platforms.create(600, 450, 'ground');
 	platform4.body.immovable = true;
 
+	var platform5 = platforms.create(680,120, 'ground');
+	platform5.body.immovable = true;
+
+
 
 	//set text style
 	var style = {font: "bold 32px Arial", fill:"#fff"};
@@ -59,7 +65,7 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	endlabel = game.add.text(80, 300, "Game Over! Your Score is ", style);
+	endlabel = game.add.text(150, 300, "Game Over! Your Score is ", style);
 	endlabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	endlabel.visible = false;
 
@@ -117,6 +123,13 @@ function create(){
 		enemy5.body.bounce.y = 0.2;
 		enemy5.body.gravity.y = 300;
 		enemy5.body.collideWorldBounds = true;
+
+	diamonds = game.add.physicsGroup();
+	diamods.enableBody = true;
+	var diamond = diamonds.create(780, 100, 'diamond');
+	diamond.body.gravity.y = 200;
+	diamond.body.bounce.y = 0.7 + Math.random()* 0.2;
+
 
 	stars = game.add.physicsGroup();
 	stars.enableBody = true;
@@ -199,7 +212,7 @@ function update(){
 	 game.physics.arcade.collide(enemy3, platforms);
 	 game.physics.arcade.collide(enemy4, platforms);
 	 game.physics.arcade.collide(enemy5, platforms);
-
+	 game.physics.arcade.collide(diamonds, platforms);
 
 	 //reset the player's velocity if no events
  	 player.body.velocity.x = 0;
@@ -231,6 +244,7 @@ function update(){
   	game.physics.arcade.overlap(player, enemy3, loseLife);
   	game.physics.arcade.overlap(player, enemy4, loseLife);
   	game.physics.arcade.overlap(player, enemy5, loseLife);
+  	game.physics.arcade.overlap(player, diamonds, collectDiamond);
   	moveEnemy();
   	moveEnemy2();
   	moveEnemy3();
@@ -327,6 +341,13 @@ function update(){
   			enemy5.animations.play('right');
   			enemy5.body.velocity.x = 120;
   		}
+  	}
+
+  	function collectDiamond{
+  		score += 10;
+  		score.setText(score);
+  		diamond.kill();
+  		diamond.reset(780,100);
   	}
 
   	function endGame() {
