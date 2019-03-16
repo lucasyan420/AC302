@@ -163,6 +163,11 @@ function update(){
 	 game.physics.arcade.collide(player, platforms);
 	 game.physics.arcade.collide(stars, platforms);
 	 game.physics.arcade.collide(enemy, platforms);
+	 game.physics.arcade.collide(enemy2, platforms);
+	 game.physics.arcade.collide(enemy3, platforms);
+	 game.physics.arcade.collide(enemy4, platforms);
+	 game.physics.arcade.collide(enemy5, platforms);
+
 
 	 //reset the player's velocity if no events
  	 player.body.velocity.x = 0;
@@ -190,6 +195,10 @@ function update(){
 
   	game.physics.arcade.overlap(player, stars, collectStar);
   	game.physics.arcade.overlap(player, enemy, loseLife);
+  	game.physics.arcade.overlap(player, enemy2, loseLife);
+  	game.physics.arcade.overlap(player, enemy3, loseLife);
+  	game.physics.arcade.overlap(player, enemy4, loseLife);
+  	game.physics.arcade.overlap(player, enemy5, loseLife);
   	moveEnemy();
 
   	if(life <= 0 ){
