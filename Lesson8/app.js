@@ -268,7 +268,7 @@ function update(){
 
   	function moveEnemy3(){
   		//Enemy AI
-  		if(enemy3.x > 790){
+  		if(enemy3.x > 770){
   			enemy3.animations.play('left');
   			enemy3.body.velocity.x = -120;
   		} else if(enemy3.x < 0 ){
