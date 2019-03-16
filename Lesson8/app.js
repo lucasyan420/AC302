@@ -91,7 +91,7 @@ function create(){
 		enemy2.body.gravity.y = 300;
 		enemy2.body.collideWorldBounds = true;
 
-	enemy3 = game.add.sprite(360, 0, 'baddie');
+	enemy3 = game.add.sprite(360, 560, 'baddie');
 		
 		enemy3.animations.add('left',[0,1],10,true);
 		enemy3.animations.add('right',[2,3],10,true);
@@ -158,6 +158,7 @@ function create(){
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = +80;
 	enemy2.body.velocity.x = +80;
+	enemy3.body.velocity.x = +80;
 	enemy4.body.velocity.x = +80;
 	enemy5.body.velocity.x = +80;
 
