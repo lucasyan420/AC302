@@ -190,10 +190,7 @@ function update(){
   	function endGame() {
   		player.kill();
   		enemy.kill();
-  		platform1.kill();
-  		platform2.kill();
-  		platform3.kill();
-  		platform4.kill();
+  		platforms.kill();
   		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
   		scoretext.visible = false;
   		lifelabel.visible = false;
