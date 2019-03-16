@@ -9,7 +9,7 @@ function preload(){
 	game.load.image('sky','sky.png');
 	game.load.spritesheet('dude', 'dude.png', 32, 48);
 	game.load.image('ground', 'platform1.png');
-	game.load.image ('stars', 'star.png')
+	game.load.image ('star', 'star.png')
 	game.load.spritesheet('baddie', 'baddie.png', 32, 32);
 	game.load.image('diamond', 'diamond.png');
 	game.load.image('health', 'firstaid.png');
@@ -345,7 +345,7 @@ function update(){
 
   	function collectDiamond(){
   		score += 10;
-  		score.setText(score);
+  		scoretext.setText(score);
   		diamond.kill();
   		diamond.reset(780,100);
   	}
