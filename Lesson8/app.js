@@ -245,7 +245,7 @@ function update(){
   		scoretext.setText(score);
   		//remove the star and reset the top
   		star.kill();
-  		star.reset(Math.floor(Math.random()*800),(Math.floor(Math.random()*600)));
+  		star.reset(Math.floor(Math.random()*800),(Math.floor(Math.random()*550)));
 
   	}
 
