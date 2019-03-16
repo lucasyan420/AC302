@@ -161,7 +161,8 @@ function create(){
 	enemy3.body.velocity.x = +80;
 	enemy3.animations.play('right');
 	enemy4.body.velocity.x = +80;
-	enemy5.body.velocity.x = +80;
+	enemy5.body.velocity.x = -20;
+	enemy5.animations.play('left');
 
 
 }
