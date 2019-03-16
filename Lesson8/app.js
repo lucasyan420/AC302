@@ -157,6 +157,11 @@ function create(){
 
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = -120;
+	enemy2.body.velocity.x = -120;
+	enemy3.body.velocity.x = -120;
+	enemy4.body.velocity.x = -120;
+	enemy5.body.velocity.x = -120;
+
 }
 
 function update(){
@@ -223,15 +228,23 @@ function update(){
   		lifetext.setText(life);
   		//reset the enemy
   		enemy.kill();
-  		enemy.reset(10,20)
+  		enemy.reset(0,0);
+  		enemy2.kill();
+  		enemy2.reset(225,0);
+  		enemy3.kill();
+  		enemy3.reset(375,0);
+  		enemy4.kill();
+  		enemy4.reset(425,0);
+  		enemy5.kill();
+  		enemy5.reset(675,0);
   	}
 
   	function moveEnemy(){
   		//Enemy AI
-  		if(enemy.x > 759){
+  		if(enemy.x > 220){
   			enemy.animations.play('left');
   			enemy.body.velocity.x = -120;
-  		} else if(enemy.x < 405 ){
+  		} else if(enemy.x < 0 ){
   			enemy.animations.play('right');
   			enemy.body.velocity.x = 120;
   		}
@@ -240,6 +253,10 @@ function update(){
   	function endGame() {
   		player.kill();
   		enemy.kill();
+  		enemy2.kill();
+  		enemy3.kill();
+  		enemy4.kill();
+  		enemy5.kill();
   		platforms.kill();
   		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
   		scorelabel.visible = false;
