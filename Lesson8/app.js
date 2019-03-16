@@ -7,55 +7,60 @@ function preload(){
 	// static image
 	// sprite sheet (animations or different image)
 	game.load.image('sky','sky.png');
-	game.load.spritesheet("player", "dude.png", 32, 48);
-	game.load.image('platform', 'platform1.png');
-	game.load.image ("star", "star.png")
-	game.load.spritesheet("baddie", "baddie.png", 32, 32);
+	game.load.spritesheet('dude', 'dude.png', 32, 48);
+	game.load.image('ground', 'platform1.png');
+	game.load.image ('star', 'star.png')
+	game.load.spritesheet('baddie', 'baddie.png', 32, 32);
 
 }
 
 function create(){
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
+	//create the sky
 	game.add.sprite(0,0, 'sky');
+	//create group of platforms
+	platforms = game.add.physicsGroup();
+	platforms.enableBody = true;
 
-	platform = game.add.physicsGroup();
-	platform.enableBody = true;
-
-	var ground = platform.create(0, 550, 'platform');
+	var ground = platforms.create(0, 550, 'ground');
 	//mutliples the height & width of ground image by 2
 	ground.scale.setTo(2,2);
 	//set ground to immovable
 	ground.body.immovable = true;
 
-	var platform1 = platform.create(100,150, 'platform');
+	var platform1 = platforms.create(100,150, 'platform');
 	platform1.scale.setTo(1/2,1);
 	platform1.body.immovable = true;
 
-	var platform2 = platform.create(400, 250, 'platform');
+	var platform2 = platforms.create(400, 250, 'platform');
 	platform2.scale.setTo(1/2,1);
 	platform2.body.immovable = true;
 
-	var platform3 = platform.create(-225,350, 'platform');
+	var platform3 = platforms.create(-225,350, 'platform');
 	platform3.body.immovable = true;
 
-	var platform4 = platform.create(600, 450, 'platform');
+	var platform4 = platforms.create(600, 450, 'platform');
 	platform4.body.immovable = true;
 
+
+	//set text style
 	var style = {font: "bold 32px Arial", fill:"#fff"};
 
+	//positioning the score
 	scorelabel = game.add.text(300,560, "Score:", style);
 	scoretext = game.add.text(420,560, score, style);
 	scorelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	scoretext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-
+	//positioning the lives
 	lifelabel = game.add.text(10,5, "Life:", style);
 	lifetext = game.add.text(80,5, life, style)
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	player = game.add.sprite(50, 400, 'player');
+
+	player = game.add.sprite(50, 400, 'dude');
 		
 		player.animations.add('left',[0,1,2,3],10,true);
 		player.animations.add('right',[5,6,7,8],10,true);
@@ -118,8 +123,10 @@ function update(){
 	 game.physics.arcade.collide(stars, platform);
 	 game.physics.arcade.collide(enemy, platform);
 
+	 //reset the player's velocity if no events
  	 player.body.velocity.x = 0;
 
+ 	 //player movements
  	 if(cursors.left.isDown) {
  	 	player.body.velocity.x = -150;
  	 	player.animations.play('left');
@@ -161,9 +168,9 @@ function update(){
 
   	function loseLife(player, enemy){
   		//update score variable
-  		score = score -1;
+  		life -= 1;
   		//reflect in text
-  		scoretext.setTest(score);
+  		lifetext.setText(life);
   		//reset the enemy
   		enemy.kill();
   		enemy.reset(10,20)
@@ -171,7 +178,7 @@ function update(){
 
   	function moveEnemy(){
   		//Enemy AI
-  		if(enemy.x > 449){
+  		if(enemy.x > 759){
   			enemy.animations.play('left');
   			enemy.body.velocity.x = -120;
   		} else if(enemy.x < 405 ){
