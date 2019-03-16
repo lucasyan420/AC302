@@ -158,7 +158,6 @@ function create(){
 	cursors = game.input.keyboard.createCursorKeys();
 	enemy.body.velocity.x = +80;
 	enemy2.body.velocity.x = +80;
-	enemy3.body.velocity.x = +80;
 	enemy4.body.velocity.x = +80;
 	enemy5.body.velocity.x = +80;
 
