@@ -73,7 +73,7 @@ function create(){
 		player.body.gravity.y = 300;
 		player.body.collideWorldBounds = true;
 
-	enemy = game.add.sprite(450, 0, 'baddie');
+	enemy = game.add.sprite(20, 0, 'baddie');
 		
 		enemy.animations.add('left',[0,1],10,true);
 		enemy.animations.add('right',[2,3],10,true);
@@ -81,6 +81,42 @@ function create(){
 		enemy.body.bounce.y = 0.2;
 		enemy.body.gravity.y = 300;
 		enemy.body.collideWorldBounds = true;
+
+	enemy2 = game.add.sprite(250, 0, 'baddie');
+		
+		enemy2.animations.add('left',[0,1],10,true);
+		enemy2.animations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy2);
+		enemy2.body.bounce.y = 0.2;
+		enemy2.body.gravity.y = 300;
+		enemy2.body.collideWorldBounds = true;
+
+	enemy3 = game.add.sprite(400, 0, 'baddie');
+		
+		enemy3.animations.add('left',[0,1],10,true);
+		enemy3.animations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy3);
+		enemy3.body.bounce.y = 0.2;
+		enemy3.body.gravity.y = 300;
+		enemy3.body.collideWorldBounds = true;
+
+	enemy4 = game.add.sprite(450, 0, 'baddie');
+		
+		enemy4.animations.add('left',[0,1],10,true);
+		enemy4.animations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy4);
+		enemy4.body.bounce.y = 0.2;
+		enemy4.body.gravity.y = 300;
+		enemy4.body.collideWorldBounds = true
+
+	enemy5 = game.add.sprite(700, 0, 'baddie');
+		
+		enemy5.animations.add('left',[0,1],10,true);
+		enemy5.animations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy5);
+		enemy5.body.bounce.y = 0.2;
+		enemy5.body.gravity.y = 300;
+		enemy5.body.collideWorldBounds = true;
 
 	stars = game.add.physicsGroup();
 	stars.enableBody = true;
@@ -120,6 +156,7 @@ function create(){
 	star11.body.bounce.y = 0.7 + Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
+	enemy.body.velocity.x = -120;
 }
 
 function update(){
@@ -155,7 +192,7 @@ function update(){
   	game.physics.arcade.overlap(player, enemy, loseLife);
   	moveEnemy();
 
-  	if(life < 0 ){
+  	if(life <= 0 ){
   		endGame();
   	}
 
