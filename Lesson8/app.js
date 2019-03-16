@@ -238,12 +238,16 @@ function update(){
   		enemy.reset(0,0);
   		enemy2.kill();
   		enemy2.reset(225,0);
+  		enemy2.body.velocity.x = +80;
   		enemy3.kill();
-  		enemy3.reset(375,0);
+  		enemy3.reset(365,0);
+  		enemy3.body.velocity.x = +80;
   		enemy4.kill();
   		enemy4.reset(425,0);
+  		enemy4.body.velocity.x = +80;
   		enemy5.kill();
   		enemy5.reset(675,0);
+  		enemy5.body.velocity.x = +80;
   	}
 
   	function moveEnemy(){
