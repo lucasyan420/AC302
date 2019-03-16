@@ -156,7 +156,7 @@ function create(){
 	star11.body.bounce.y = 0.7 + Math.random() * 0.2;
 
 	cursors = game.input.keyboard.createCursorKeys();
-	enemy.body.velocity.x = -80;
+	enemy.body.velocity.x = +80;
 	enemy2.body.velocity.x = -80;
 	enemy3.body.velocity.x = -80;
 	enemy4.body.velocity.x = -80;
@@ -257,10 +257,10 @@ function update(){
 
   	function moveEnemy2(){
   		//Enemy AI
-  		if(enemy2.x > 300){
+  		if(enemy2.x > 280){
   			enemy2.animations.play('left');
   			enemy2.body.velocity.x = -120;
-  		} else if(enemy2.x < 180 ){
+  		} else if(enemy2.x < 75 ){
   			enemy2.animations.play('right');
   			enemy2.body.velocity.x = 120;
   		}
