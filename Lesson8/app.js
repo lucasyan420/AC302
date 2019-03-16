@@ -249,7 +249,7 @@ function update(){
   		if(enemy.x > 220){
   			enemy.animations.play('left');
   			enemy.body.velocity.x = -120;
-  		} else if(enemy.x < 0 ){
+  		} else if(enemy.x < 20 ){
   			enemy.animations.play('right');
   			enemy.body.velocity.x = 120;
   		}
