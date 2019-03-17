@@ -320,7 +320,6 @@ function update(){
   			enemy6.body.velocity.x = 180;
   		} 
 
-  		update();
   		endlabel.visible = false;
 
   	}
