@@ -297,7 +297,7 @@ function update(){
   		enemy4.reset(425,0);
   		enemy4.body.velocity.x = +80;
   		enemy5.kill();
-  		enemy5.reset(675,0);
+  		enemy5.reset(675,200);
   		enemy5.body.velocity.x = +80;
   		enemy6.reset(750,50);
   		enemy6.body.velocity.x = +80;
@@ -360,10 +360,10 @@ function update(){
 
   	function moveEnemy6(){
   		//Enemy AI
-  		if(enemy6.x > 740){
+  		if(enemy6.x > 745){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -120;
-  		} else if(enemy6.x < 690 ){
+  		} else if(enemy6.x < 650 ){
   			enemy6.animations.play('right');
   			enemy6.body.velocity.x = 120;
   		}
@@ -374,7 +374,7 @@ function update(){
   		scoretext.setText(score);
   		diamonds.kill();
   		diamonds.reset(750,50);
-  		player.reset(300,300);
+  		player.reset(330,0);
 
   	}
   	}
