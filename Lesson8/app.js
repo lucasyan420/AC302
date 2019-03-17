@@ -261,6 +261,7 @@ function update(){
   	moveEnemy3();
   	moveEnemy4();
   	moveEnemy5();
+  	moveEnemy6();
 
   	if(life <= 0 ){
   		endGame();
@@ -384,6 +385,7 @@ function update(){
   		enemy3.kill();
   		enemy4.kill();
   		enemy5.kill();
+  		enemy6.kill();
   		platforms.kill();
   		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
   		scorelabel.visible = false;
