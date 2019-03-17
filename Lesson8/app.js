@@ -2,6 +2,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:c
 
 var score = 0;
 var life = 3;
+var level = 1;
 
 function preload(){
 	// static image
@@ -268,6 +269,59 @@ function update(){
   		endGame();
   	}
 
+  	if(life >= 20){
+  		level2();
+  	}
+
+  	function level2(){
+  		newlevel();
+  		level++;
+
+  		if(enemy.x > 160){
+  			enemy.animations.play('left');
+  			enemy.body.velocity.x = -180;
+  		} else if(enemy.x < 5 ){
+  			enemy.animations.play('right');
+  			enemy.body.velocity.x = 180;
+  		} 
+  		if(enemy2.x > 160){
+  			enemy2.animations.play('left');
+  			enemy2.body.velocity.x = -180;
+  		} else if(enemy2.x < 5 ){
+  			enemy2.animations.play('right');
+  			enemy2.body.velocity.x = 180;
+  		} 
+  		if(enemy3.x > 160){
+  			enemy3.animations.play('left');
+  			enemy3.body.velocity.x = -300;
+  		} else if(enemy3.x < 5 ){
+  			enemy3.animations.play('right');
+  			enemy3.body.velocity.x = 300;
+  		} 
+  		if(enemy4.x > 160){
+  			enemy4.animations.play('left');
+  			enemy4.body.velocity.x = -180;
+  		} else if(enemy4.x < 5 ){
+  			enemy4.animations.play('right');
+  			enemy4.body.velocity.x = 180;
+  		}
+  		if(enemy5.x > 160){
+  			enemy5.animations.play('left');
+  			enemy5.body.velocity.x = -180;
+  		} else if(enemy5.x < 5 ){
+  			enemy5.animations.play('right');
+  			enemy5.body.velocity.x = 180;
+  		} 
+  		if(enemy6.x > 160){
+  			enemy6.animations.play('left');
+  			enemy6.body.velocity.x = -180;
+  		} else if(enemy6.x < 5 ){
+  			enemy6.animations.play('right');
+  			enemy6.body.velocity.x = 180;
+  		} 
+
+  	}
+
   	function collectStar(player, star){
   		//update score variable
   		score = score +1;
@@ -285,6 +339,17 @@ function update(){
   		//reflect in text
   		lifetext.setText(life);
   		//reset the enemy
+  		reset();
+  	}
+
+  	function newLevel(){
+  		endlabel.visible = true;
+  		endlabel.text = "Good Job! You've successfully made it to Level" + level
+  	}
+
+  	function reset(){
+  		player.kill();
+  		player.reset(330,0)
   		enemy.kill();
   		enemy.reset(0,0);
   		enemy2.kill();
@@ -302,7 +367,6 @@ function update(){
   		enemy6.reset(750,50);
   		enemy6.body.velocity.x = +80;
   	}
-
   	function moveEnemy(){
   		//Enemy AI
   		if(enemy.x > 160){
