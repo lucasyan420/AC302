@@ -269,7 +269,7 @@ function update(){
   		endGame();
   	}
 
-  	if(life >= 20){
+  	if(score >= 20){
   		level2();
   	}
 
