@@ -45,7 +45,7 @@ function create(){
 	var platform4 = platforms.create(600, 450, 'ground');
 	platform4.body.immovable = true;
 
-	var platform5 = platforms.create(650,120, 'ground');
+	var platform5 = platforms.create(620,120, 'ground');
 	platform5.body.immovable = true;
 
 
@@ -360,7 +360,7 @@ function update(){
 
   	function moveEnemy6(){
   		//Enemy AI
-  		if(enemy6.x > 780){
+  		if(enemy6.x > 770){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -120;
   		} else if(enemy6.x < 690 ){
