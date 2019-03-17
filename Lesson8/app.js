@@ -361,7 +361,7 @@ function update(){
   		if(enemy6.x > 790){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -120;
-  		} else if(enemy5.x < 690 ){
+  		} else if(enemy6.x < 690 ){
   			enemy6.animations.play('right');
   			enemy6.body.velocity.x = 120;
   		}
