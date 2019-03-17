@@ -369,4 +369,3 @@ function update(){
   		lifelabel.visible = false;
   		lifetext.visible = false;
   	}
-}
