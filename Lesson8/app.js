@@ -360,7 +360,7 @@ function update(){
 
   	function moveEnemy6(){
   		//Enemy AI
-  		if(enemy6.x > 790){
+  		if(enemy6.x > 780){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -120;
   		} else if(enemy6.x < 690 ){
