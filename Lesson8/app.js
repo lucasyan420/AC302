@@ -347,7 +347,7 @@ function update(){
   		score += 10;
   		scoretext.setText(score);
   		diamonds.kill();
-  		diamonds.reset(780,100);
+  		diamond.reset(780,100);
   	}
 
   	function endGame() {
