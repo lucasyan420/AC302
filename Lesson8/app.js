@@ -297,6 +297,8 @@ function update(){
   		enemy5.kill();
   		enemy5.reset(675,0);
   		enemy5.body.velocity.x = +80;
+  		enemy6.reset(750,50);
+  		enemy6.body.velocity.x = +80;
   	}
 
   	function moveEnemy(){
@@ -354,12 +356,23 @@ function update(){
   		}
   	}
 
+  	function moveEnemy6(){
+  		//Enemy AI
+  		if(enemy6.x > 790){
+  			enemy6.animations.play('left');
+  			enemy6.body.velocity.x = -120;
+  		} else if(enemy5.x < 690 ){
+  			enemy6.animations.play('right');
+  			enemy6.body.velocity.x = 120;
+  		}
+  	}
+
   	function collectDiamond(player, diamonds){
   		score += 10;
   		scoretext.setText(score);
   		diamonds.kill();
   		diamonds.reset(750,50);
-  		player.reset(300,350);
+  		player.reset(300,300);
 
   	}
   	}
