@@ -209,7 +209,7 @@ function create(){
 	enemy4.body.velocity.x = +80;
 	enemy5.body.velocity.x = -20;
 	enemy5.animations.play('left');
-	enemy6.body.velocity.x = -20;
+	enemy6.body.velocity.x = -80;
 	enemy6.animations.play('left');
 
 
@@ -387,6 +387,7 @@ function update(){
   		enemy4.kill();
   		enemy5.kill();
   		enemy6.kill();
+  		diamonds.kill();
   		platforms.kill();
   		scorelabel.text = "GAME OVER! YOUR SCORE IS " + score;
   		scorelabel.visible = false;
