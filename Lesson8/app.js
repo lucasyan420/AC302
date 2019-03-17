@@ -45,7 +45,7 @@ function create(){
 	var platform4 = platforms.create(600, 450, 'ground');
 	platform4.body.immovable = true;
 
-	var platform5 = platforms.create(680,120, 'ground');
+	var platform5 = platforms.create(650,120, 'ground');
 	platform5.body.immovable = true;
 
 
@@ -126,7 +126,7 @@ function create(){
 
 	diamonds = game.add.physicsGroup();
 	diamonds.enableBody = true;
-	var diamond = diamonds.create(780, 100, 'diamond');
+	var diamond = diamonds.create(750, 50, 'diamond');
 	diamond.body.gravity.y = 200;
 	diamond.body.bounce.y = 0.7 + Math.random()* 0.2;
 
@@ -346,8 +346,8 @@ function update(){
   	function collectDiamond(){
   		score += 10;
   		scoretext.setText(score);
-  		diamond.kill();
-  		diamond.reset(780,100);
+  		diamonds.kill();
+  		diamonds.reset(780,100);
   	}
 
   	function endGame() {
