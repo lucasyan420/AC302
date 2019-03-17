@@ -343,12 +343,11 @@ function update(){
   		}
   	}
 
-  	function collectDiamond(){
+  	function collectDiamond(player, diamonds){
   		score += 10;
   		scoretext.setText(score);
   		diamonds.kill();
-  		// diamonds.reset(780,100);
-  		star.reset(Math.floor(Math.random()*800),(Math.floor(Math.random()*550)));
+  		diamonds.reset(780,100);
 
   	}
   	}
