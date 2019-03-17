@@ -274,7 +274,7 @@ function update(){
   	}
 
   	function level2(){
-  		newlevel();
+  		newLevel();
   		level++;
 
   		if(enemy.x > 160){
@@ -345,6 +345,7 @@ function update(){
   	function newLevel(){
   		endlabel.visible = true;
   		endlabel.text = "Good Job! You've successfully made it to Level" + level
+  		reset();
   	}
 
   	function reset(){
