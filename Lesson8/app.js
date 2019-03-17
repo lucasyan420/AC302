@@ -347,7 +347,10 @@ function update(){
   		score += 10;
   		scoretext.setText(score);
   		diamonds.kill();
-  		diamonds.reset(780,100);
+  		// diamonds.reset(780,100);
+  		star.reset(Math.floor(Math.random()*800),(Math.floor(Math.random()*550)));
+
+  	}
   	}
 
   	function endGame() {
