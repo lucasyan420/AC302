@@ -124,6 +124,15 @@ function create(){
 		enemy5.body.gravity.y = 300;
 		enemy5.body.collideWorldBounds = true;
 
+	enemy6 = game.add.sprite(750, 50, 'baddie');
+		
+		enemy6.animations.add('left',[0,1],10,true);
+		enemy6.animations.add('right',[2,3],10,true);
+		game.physics.arcade.enable(enemy6);
+		enemy6.body.bounce.y = 0.2;
+		enemy6.body.gravity.y = 300;
+		enemy6.body.collideWorldBounds = true;
+
 	diamonds = game.add.physicsGroup();
 	diamonds.enableBody = true;
 	var diamond = diamonds.create(750, 50, 'diamond');
@@ -200,6 +209,7 @@ function create(){
 	enemy4.body.velocity.x = +80;
 	enemy5.body.velocity.x = -20;
 	enemy5.animations.play('left');
+	enemy6.body.velocity.x = +20;
 
 
 }
@@ -211,7 +221,8 @@ function update(){
 	 game.physics.arcade.collide(enemy2, platforms);
 	 game.physics.arcade.collide(enemy3, platforms);
 	 game.physics.arcade.collide(enemy4, platforms);
-	 game.physics.arcade.collide(enemy5, platforms);
+	 game.physics.arcade.collide(enemy5, platforms
+	 game.physics.arcade.collide(enemy6, platforms);	 
 	 game.physics.arcade.collide(diamonds, platforms);
 
 	 //reset the player's velocity if no events
@@ -347,7 +358,8 @@ function update(){
   		score += 10;
   		scoretext.setText(score);
   		diamonds.kill();
-  		diamonds.reset(780,100);
+  		diamonds.reset(750,50);
+  		player.reset(300,350);
 
   	}
   	}
