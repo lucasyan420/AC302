@@ -221,7 +221,7 @@ function update(){
 	 game.physics.arcade.collide(enemy2, platforms);
 	 game.physics.arcade.collide(enemy3, platforms);
 	 game.physics.arcade.collide(enemy4, platforms);
-	 game.physics.arcade.collide(enemy5, platforms
+	 game.physics.arcade.collide(enemy5, platforms);
 	 game.physics.arcade.collide(enemy6, platforms);	 
 	 game.physics.arcade.collide(diamonds, platforms);
 
