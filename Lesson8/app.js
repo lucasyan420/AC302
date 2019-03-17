@@ -319,7 +319,7 @@ function update(){
   		if(enemy2.x > 280){
   			enemy2.animations.play('left');
   			enemy2.body.velocity.x = -120;
-  		} else if(enemy2.x < 75 ){
+  		} else if(enemy2.x < 80 ){
   			enemy2.animations.play('right');
   			enemy2.body.velocity.x = 120;
   		}
@@ -360,10 +360,10 @@ function update(){
 
   	function moveEnemy6(){
   		//Enemy AI
-  		if(enemy6.x > 745){
+  		if(enemy6.x > 750){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -120;
-  		} else if(enemy6.x < 650 ){
+  		} else if(enemy6.x < 630 ){
   			enemy6.animations.play('right');
   			enemy6.body.velocity.x = 120;
   		}
