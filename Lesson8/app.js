@@ -284,41 +284,44 @@ function update(){
   			enemy.animations.play('right');
   			enemy.body.velocity.x = 180;
   		} 
-  		if(enemy2.x > 160){
+  		if(enemy2.x > 280){
   			enemy2.animations.play('left');
   			enemy2.body.velocity.x = -180;
-  		} else if(enemy2.x < 5 ){
+  		} else if(enemy2.x < 80 ){
   			enemy2.animations.play('right');
   			enemy2.body.velocity.x = 180;
   		} 
-  		if(enemy3.x > 160){
+  		if(enemy3.x > 750){
   			enemy3.animations.play('left');
   			enemy3.body.velocity.x = -300;
-  		} else if(enemy3.x < 5 ){
+  		} else if(enemy3.x < 20 ){
   			enemy3.animations.play('right');
   			enemy3.body.velocity.x = 300;
   		} 
-  		if(enemy4.x > 160){
+  		if(enemy4.x > 590){
   			enemy4.animations.play('left');
   			enemy4.body.velocity.x = -180;
-  		} else if(enemy4.x < 5 ){
+  		} else if(enemy4.x < 400 ){
   			enemy4.animations.play('right');
   			enemy4.body.velocity.x = 180;
   		}
-  		if(enemy5.x > 160){
+  		if(enemy5.x > 760){
   			enemy5.animations.play('left');
   			enemy5.body.velocity.x = -180;
-  		} else if(enemy5.x < 5 ){
+  		} else if(enemy5.x < 600 ){
   			enemy5.animations.play('right');
   			enemy5.body.velocity.x = 180;
   		} 
-  		if(enemy6.x > 160){
+  		if(enemy6.x > 750){
   			enemy6.animations.play('left');
   			enemy6.body.velocity.x = -180;
-  		} else if(enemy6.x < 5 ){
+  		} else if(enemy6.x < 630 ){
   			enemy6.animations.play('right');
   			enemy6.body.velocity.x = 180;
   		} 
+
+  		update();
+  		endlabel.visible = false;
 
   	}
 
