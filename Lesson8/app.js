@@ -66,7 +66,7 @@ function create(){
 	lifelabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	lifetext.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 
-	endlabel = game.add.text(150, 300, "Game Over! Your Score is ", style);
+	endlabel = game.add.text(25, 300, "Game Over! Your Score is ", style);
 	endlabel.setShadow(3,3, 'rgba(0,0,0,0.5)', 2);
 	endlabel.visible = false;
 
@@ -339,16 +339,6 @@ function update(){
   		//reflect in text
   		lifetext.setText(life);
   		//reset the enemy
-  		reset();
-  	}
-
-  	function newLevel(){
-  		endlabel.visible = true;
-  		endlabel.text = "Good Job! You've successfully made it to Level" + level
-  		reset();
-  	}
-
-  	function reset(){
   		player.kill();
   		player.reset(330,0)
   		enemy.kill();
@@ -368,6 +358,13 @@ function update(){
   		enemy6.reset(750,50);
   		enemy6.body.velocity.x = +80;
   	}
+
+  	function newLevel(){
+  		endlabel.visible = true;
+  		endlabel.text = "Good Job! You've successfully made it to Level" + level
+  	}
+
+  
   	function moveEnemy(){
   		//Enemy AI
   		if(enemy.x > 160){
